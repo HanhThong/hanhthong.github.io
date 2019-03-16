@@ -15,10 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Hanh-Thong's blog
 email: huynhhanhthong@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  # A personal blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hanhthong.me" # the base hostname & protocol for your site, e.g. http://example.com
+description: ""
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://hanhthong.me"
 twitter_username: jekyllrb
 github_username:  HanhThong
 
@@ -27,6 +26,17 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+kramdown:
+  input:          GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -39,3 +49,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+gems:
+- jekyll-language-plugin
+
+language_data: data.lang.%%
+language_includes_dir: _i18n
+
+author: Hanh Thong
